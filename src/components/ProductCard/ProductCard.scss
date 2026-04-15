@@ -1,0 +1,142 @@
+.product-card {
+  margin: 10px 0;
+  width: 300px;
+  cursor: pointer;
+
+  .img-wrapper {
+    position: relative;
+    background-color: #e4f1f0;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .discount-fav {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+
+      .discount {
+        background-color: #db4444;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      .fav-icon {
+        color: #e4d4d1;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &.active {
+          color: #db4444;
+        }
+
+        &:hover {
+          color: #db4444;
+        }
+      }
+    }
+
+    .img-card {
+      padding: 20px;
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+      }
+    }
+
+    .add-to-cart {
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 36px;
+      background-color: #000;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: bottom 0.3s ease;
+      &.in-cart {
+        background-color: #db4444;
+        cursor: not-allowed;
+        opacity: 0.8;
+      }
+    }
+    &:hover .add-to-cart {
+      bottom: 0;
+    }
+  }
+
+  .price-title {
+    padding: 10px 4px;
+
+    .title-card {
+      font-size: 17px;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .old-new-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .new-price {
+        font-size: 16px;
+        font-weight: 700;
+        color: #db4444;
+      }
+
+      .old-price {
+        font-size: 13px;
+        color: #aaa;
+        text-decoration: line-through;
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    width: 100%;
+    padding: 0 15px;
+
+    .img-wrapper {
+      .img-card {
+        img {
+          height: 140px;
+        }
+      }
+    }
+
+    .price-title {
+      .title-card {
+        font-size: 14px;
+      }
+
+      .old-new-price {
+        .new-price {
+          font-size: 14px;
+        }
+
+        .old-price {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

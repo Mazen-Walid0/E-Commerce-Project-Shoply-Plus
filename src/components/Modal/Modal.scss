@@ -1,0 +1,67 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+
+  .modal {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+
+      button {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 0.85;
+        }
+
+        &.cancel {
+          background-color: #f0f0f0;
+          color: #333;
+        }
+
+        &.login {
+          background-color: #e74c3c;
+          color: #fff;
+        }
+
+        &.register {
+          background-color: #111;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

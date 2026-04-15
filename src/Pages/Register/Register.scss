@@ -1,0 +1,137 @@
+.register {
+  overflow: hidden;
+  background-color: rgb(250, 243, 243);
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+  }
+}
+
+.info-user {
+  width: 50%;
+  max-width: 500px;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    span {
+      color: red;
+      font-size: 13px;
+    }
+  }
+
+  .password-box {
+    position: relative;
+
+    input {
+      padding-right: 45px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      width: auto;
+      padding: 0;
+      background: none;
+      border: none;
+      color: #555;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+
+    a {
+      color: red;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .register {
+    justify-content: center;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .info-user {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+
+    form {
+      align-items: center;
+    }
+
+    .input-box {
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

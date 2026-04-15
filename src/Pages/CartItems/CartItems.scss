@@ -1,0 +1,260 @@
+.cart-items {
+  background-color: #e7f6f9;
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 14px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    .image {
+      width: 200px;
+      position: relative;
+      background: #f8f8f8;
+      border-radius: 12px;
+      padding: 15px;
+
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: red;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        display: block;
+      }
+    }
+
+    .info-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .title-item {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .price {
+        font-size: 17px;
+
+        .new {
+          color: red;
+          font-weight: 700;
+          margin-left: 5px;
+        }
+
+        .old {
+          text-decoration: line-through;
+          color: #777;
+          margin-left: 5px;
+        }
+      }
+
+      .quantity-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        button {
+          background-color: black;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 18px;
+        }
+
+        .quantity {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      .total {
+        font-size: 18px;
+        font-weight: 600;
+
+        span {
+          color: red;
+          font-size: 20px;
+        }
+      }
+
+      .remove {
+        width: fit-content;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .cart-total {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+
+      span {
+        color: red;
+        margin-left: 10px;
+      }
+    }
+  }
+  .cart-total {
+    &.empty {
+      padding: 40px 20px;
+
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        h2 {
+          font-size: 22px;
+          font-weight: 700;
+          color: #333;
+        }
+
+        p {
+          font-size: 14px;
+          color: #777;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #555;
+      }
+    }
+  }
+  @media (max-width: 902px) {
+    .item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 15px;
+
+      .image {
+        width: 280px;
+        min-width: 280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 160px;
+          object-fit: contain;
+          display: block;
+        }
+      }
+    }
+
+    .cart-total {
+      h3 {
+        font-size: 20px;
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .item {
+      .image {
+        width: 220px;
+        min-width: 220px;
+
+        img {
+          height: 130px;
+        }
+      }
+
+      .info-item {
+        width: 100%;
+        gap: 12px;
+
+        .title-item {
+          font-size: 18px;
+        }
+
+        .price {
+          font-size: 15px;
+        }
+
+        .quantity-box {
+          gap: 10px;
+
+          button {
+            padding: 6px 14px;
+            font-size: 16px;
+          }
+
+          .quantity {
+            font-size: 16px;
+          }
+        }
+
+        .total {
+          font-size: 16px;
+
+          span {
+            font-size: 18px;
+          }
+        }
+
+        .remove {
+          padding: 10px 18px;
+          font-size: 14px;
+        }
+      }
+    }
+    .cart-total {
+      h3 {
+        font-size: 18px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
