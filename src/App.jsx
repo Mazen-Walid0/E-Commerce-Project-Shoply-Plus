@@ -13,11 +13,13 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import About from "./Pages/About/About";
 import CartItems from "./Pages/CartItems/CartItems";
 import FavoriteItems from "./Pages/FavoriteItems/FavoriteItems";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <main className="">
         <Routes>
           <Route path="/login" element={<Login />} />
