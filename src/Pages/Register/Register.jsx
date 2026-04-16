@@ -59,26 +59,22 @@ export default function Register() {
       return;
     }
 
-    // حفظ الحساب في localStorage
     dispatch(login(formData));
 
     toast.success("Account created successfully!");
 
-    // تفريغ الحقول
     setFormData({
       name: "",
       email: "",
       password: "",
     });
 
-    // تفريغ الأخطاء
     setErrors({
       name: "",
       email: "",
       password: "",
     });
 
-    // تحويل للهوم بعد ثواني بسيطة
     navigate("/");
   };
 
