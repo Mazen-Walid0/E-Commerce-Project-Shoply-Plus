@@ -1,16 +1,66 @@
-# React + Vite
+# 🛒 E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web application inspired by platforms like Amazon and Noon, built with a focus on performance, scalability, and clean user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
 
-## React Compiler
+This project is a fully responsive frontend e-commerce application that allows users to browse products, search, manage their cart, and save favorite items.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Authentication, cart, and favorites are handled using local storage, while product data is fetched from an external API.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- 🔍 Product search functionality  
+- 🛍 Add / remove items from cart  
+- ❤️ Add / remove favorites  
+- 👤 Login & Register system (local storage based)  
+- 🗂 Browse products by categories  
+- 📄 Category details page  
+- ⚡ Fully responsive design  
+- 🔄 State management using Redux Toolkit  
+
+---
+
+## 🛠 Tech Stack
+
+- React (Vite)
+- Redux Toolkit
+- React Router DOM
+- Axios
+- Sass
+- Tailwind CSS
+- React Icons
+- React Hot Toast
+
+---
+
+## ⚙️ State Management
+
+The application uses **Redux Toolkit** for managing:
+
+- Cart state  
+- Favorites  
+- User authentication  
+- Global app state  
+
+---
+
+## 🌐 API Usage
+
+- Products are fetched from an external API using Axios  
+- Authentication and user-related features are simulated using local storage  
+
+---
+
+## 📂 Project Structure
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+Live Demo: https://silly-meringue-55a614.netlify.app/
