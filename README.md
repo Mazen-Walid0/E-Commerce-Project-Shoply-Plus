@@ -1,66 +1,92 @@
-# 🛒 E-Commerce Web App
+# Shoply Plus — E-Commerce Web App
 
-A modern e-commerce web application inspired by platforms like Amazon and Noon, built with a focus on performance, scalability, and clean user experience.
+A fully responsive, scalable front-end e-commerce application inspired by platforms like Amazon and Noon.
+Built with React, Redux Toolkit, and a clean component-based architecture focused on performance and user experience.
 
----
-
-## 📌 Overview
-
-This project is a fully responsive frontend e-commerce application that allows users to browse products, search, manage their cart, and save favorite items.
-
-Authentication, cart, and favorites are handled using local storage, while product data is fetched from an external API.
+🔗 **Live Demo:** [silly-meringue-55a614.netlify.app](https://silly-meringue-55a614.netlify.app/)
 
 ---
 
-## 🚀 Features
+## Overview
 
-- 🔍 Product search functionality  
-- 🛍 Add / remove items from cart  
-- ❤️ Add / remove favorites  
-- 👤 Login & Register system (local storage based)  
-- 🗂 Browse products by categories  
-- 📄 Category details page  
-- ⚡ Fully responsive design  
-- 🔄 State management using Redux Toolkit  
+Shoply Plus is a front-end e-commerce project that allows users to browse products, search by keyword, filter by category, manage a shopping cart, and save favorite items.
+
+Product data is fetched from the [DummyJSON API](https://dummyjson.com/) using Axios.
+Authentication, cart, and favorites are persisted via **Redux Toolkit** and **localStorage**.
 
 ---
 
-## 🛠 Tech Stack
+## Features
 
-- React (Vite)
-- Redux Toolkit
-- React Router DOM
-- Axios
-- Sass
-- Tailwind CSS
-- React Icons
-- React Hot Toast
-
----
-
-## ⚙️ State Management
-
-The application uses **Redux Toolkit** for managing:
-
-- Cart state  
-- Favorites  
-- User authentication  
-- Global app state  
+- 🔍 Product search with real-time filtering
+- 🛍 Add / remove items from cart with quantity control
+- ❤️ Add / remove items from favorites
+- 👤 Login & Register system (localStorage-based)
+- 🗂 Browse and filter products by category
+- 📄 Category details page with pagination
+- ⚡ Fully responsive design across all screen sizes
+- 🔄 Global state management using Redux Toolkit
 
 ---
 
-## 🌐 API Usage
+## Tech Stack
 
-- Products are fetched from an external API using Axios  
-- Authentication and user-related features are simulated using local storage  
+| Category           | Technology                    |
+|--------------------|-------------------------------|
+| Framework          | React 18 (Vite)               |
+| State Management   | Redux Toolkit                 |
+| Routing            | React Router DOM              |
+| HTTP Client        | Axios                         |
+| Styling            | Tailwind CSS, Sass (SCSS)     |
+| UI Utilities       | React Icons, React Hot Toast  |
+| API                | DummyJSON API                 |
+| Deployment         | Netlify                       |
 
 ---
 
-## 📂 Project Structure
+## State Management
+
+Redux Toolkit manages the following slices:
+
+- **cartSlice** — add, remove, update quantity, persist to localStorage
+- **favoritesSlice** — add / remove favorites, persist to localStorage
+- **productsSlice** — global product data and loading state
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components (NavBar, ProductCard, Pagination...)
+├── pages/            # Route-level pages (Home, Category, ProductDetails, Cart...)
+├── store/            # Redux store and slices (cartSlice, favoritesSlice, productsSlice)
+├── hooks/            # Custom React hooks
+├── styles/           # Global SCSS files
+└── main.jsx          # App entry point
+```
+
+---
+
+## Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Mazen-Walid0/E-Commerce-Project-Shoply-Plus.git
+
+# Navigate into the project directory
+cd E-Commerce-Project-Shoply-Plus
+
 # Install dependencies
 npm install
 
-# Run the development server
+# Start the development server
 npm run dev
+```
 
-Live Demo: https://silly-meringue-55a614.netlify.app/
+---
+
+## Author
+
+**Mazen Walid** — Front-End Developer
+- Email: mazenwalid385@gmail.com
