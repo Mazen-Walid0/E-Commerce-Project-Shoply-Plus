@@ -1,5 +1,3 @@
-import "./About.scss";
-
 export default function About() {
   return (
     <div className="min-h-screen bg-white text-black">
