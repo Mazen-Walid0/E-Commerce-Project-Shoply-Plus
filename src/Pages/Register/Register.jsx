@@ -3,7 +3,7 @@ import image from "../../assets/shoppingLogin.jpg";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../Redux/authSlice";
 export default function Register() {
@@ -134,7 +134,7 @@ export default function Register() {
         </form>
 
         <p className="login-link">
-          Already have account? <a href="/login">Log in</a>
+          Already have account? <Link to="/login">Log in</Link>
         </p>
       </div>
     </div>

@@ -3,7 +3,7 @@ import image from "../../assets/shoppingLogin.jpg";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../Redux/authSlice";
 
@@ -131,7 +131,7 @@ export default function Login() {
         </form>
 
         <p className="login-link">
-          Don't have account? <a href="/register">Register</a>
+          Don't have account? <Link to="/register">Register</Link>
         </p>
       </div>
     </div>
